@@ -8,4 +8,4 @@ mixin nav_menu(selected_item_id)
 			ul
 				each item in menu_items
 					- var isSelected = (item.id == selected_item_id)
-					li(class = isSelected 	? 'selected' : '' ): a(href = item.link + ".html")=item.title
+					li(class = isSelected 	? 'selected' : '' ): a(href = (item.link == 'index' ? ".." : item.link+".html"))=item.title

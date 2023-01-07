@@ -11,15 +11,30 @@
       <header class="header">
         <nav class="header__nav">
           <ul>
-            <li class="selected"><a href="#index.html">CSS</a></li>
-            <li><a href="#css-syntax.html">Синтаксис CSS</a></li>
+            <li><a href="..">CSS</a></li>
+            <li><a href="css-syntax.html">Синтаксис CSS</a></li>
             <li><a href="#css-insert.html">Вставка CSS</a></li>
             <li><a href="#css-text.html">Текст CSS</a></li>
-            <li><a href="#css-font.html">CSS шрифт</a></li>
+            <li class="selected"><a href="font.html">CSS шрифт</a></li>
             <li><a href="#blocks.html">Блоки</a></li>
           </ul>
         </nav>
       </header>
+      <main class="main">
+        <section class="images"><img src="img/css-text-decoration.png"/><img src="img/css-probely.png"/><img src="img/css-text.png"/>
+        </section>
+        <p>
+          Свойство font - универсальное свойство, позволяющее одновременно задать несколько свойств шрифта
+          font - универсальное свойство, которое позволяет одновременно задать несколько характеристик шрифта и текста.
+          Синтаксис
+          font: [font-style||font-variant||font-weight] font-size [/line-height] font-family | inherit
+        </p>
+        <p>
+          font-style - определяет начертание шрифта: обычное, курсивное или наклонное. Когда для текста установлено курсивное или наклонное начертание, браузер обращается к системе для поиска подходящего шрифта. Если заданный шрифт не найден, браузер использует специальный алгоритм для имитации нужного вида текста. Результат и качество при этом могут получиться неудовлетворительными, особенно при печати документа.
+          Синтаксис
+          font-style: normal | italic | oblique | inherit
+        </p>
+      </main>
     </div>
   </body>
 </html>
