@@ -23,52 +23,80 @@
 body {
   background-color: #164b69;
   font: 14px arial;
+  text-align: center;
 }
 .wrapper {
   background-color: #e3e3e3;
-  min-height: 700px;
   min-width: 700px;
-  margin: 30px 60px;
-  padding: 30px;
+  min-height: 700px;
+  margin: 30px 160px;
+  padding: 10px;
 }
-.main {
-  margin-top: 30px;
+main {
+  padding: 2% 5%;
 }
-.main p {
+.main p,
+.font-page p {
   text-align: justify;
   word-spacing: 1.3em;
   text-indent: 1.5em;
   line-height: 2;
 }
-.main__text {
+.main__text,
+.font-page__text {
   overflow: hidden;
 }
-.main__text img {
+.main__text img,
+.font-page__text img {
   float: right;
   margin-left: 10px;
 }
-.main__video {
+.main__video,
+.font-page__video {
   text-align: center;
+  margin-top: 20px;
+}
+.font-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.font-page section.images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.font-page section.images img {
+  width: 250px;
 }
 @media (max-width: 800px) {
   .wrapper {
-    min-width: 0;
-    min-height: 0;
+    min-width: 300px;
+    min-height: 300px;
+    margin: 10px;
   }
-  .main {
+  .main,
+  .font-page {
     margin-top: 30px;
   }
-  .main p {
+  .main p,
+  .font-page p {
     font-size: 1.8vw;
     word-spacing: 1.8vw;
   }
-  .main__text {
+  .main__text,
+  .font-page__text {
     text-align: center;
   }
-  .main__text img {
+  .main__text img,
+  .font-page__text img {
     float: none;
   }
-  .main__video iframe {
+  .main__video iframe,
+  .font-page__video iframe {
     width: 100%;
+  }
+  .font-page section.images {
+    justify-content: center;
   }
 }

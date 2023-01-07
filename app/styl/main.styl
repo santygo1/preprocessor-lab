@@ -23,16 +23,19 @@ correctText(val)
 body
 	background-color $primary-color
 	font $font-default
+	text-align center
 	
 .wrapper
 	background-color $main-block-color
-	min-height 700px
 	min-width 700px
-	margin 30px 60px
-	padding 30px
+	min-height 700px
+	margin 30px 160px
+	padding 10px
 	
-.main
-	margin-top 30px
+main
+	padding 2% 5%
+	
+.main, .font-page
 	p 
 		text-align justify
 		word-spacing 1.3em
@@ -45,12 +48,25 @@ body
 			margin-left 10px
 	&__video
 		text-align center
-
+		margin-top 20px
+			
+.font-page
+	display flex
+	flex-direction column
+	gap 30px
+	section.images
+		display flex
+		justify-content: space-between
+		flex-wrap wrap
+		img
+			width 250px
+	
 @media(max-width 800px)
 	.wrapper
-		min-width 0
-		min-height 0
-	.main
+		min-width 300px
+		min-height 300px
+		margin 10px 
+	.main, .font-page
 		margin-top 30px
 		p 
 			correctText(1.8)
@@ -61,3 +77,6 @@ body
 		&__video
 			iframe
 				width 100%
+	.font-page
+		section.images
+			justify-content center	
