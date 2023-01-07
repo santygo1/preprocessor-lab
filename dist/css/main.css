@@ -34,42 +34,47 @@ body {
 }
 main {
   padding: 2% 5%;
+  overflow: hidden;
 }
-.main p,
-.font-page p {
+.main p {
   text-align: justify;
   word-spacing: 1.3em;
   text-indent: 1.5em;
   line-height: 2;
 }
-.main__text,
-.font-page__text {
+.main__text {
   overflow: hidden;
 }
-.main__text img,
-.font-page__text img {
+.main__text img {
   float: right;
   margin-left: 10px;
 }
-.main__video,
-.font-page__video {
+.main__video {
   text-align: center;
   margin-top: 20px;
 }
 .font-page {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+}
+.font-page p {
+  text-align: justify;
+  word-spacing: 1.3em;
+  text-indent: 1.5em;
+  line-height: 2;
 }
 .font-page section.images {
   display: flex;
+  height: 100%;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .font-page section.images img {
-  width: 250px;
+  width: 30%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .wrapper {
     min-width: 300px;
     min-height: 300px;
@@ -97,6 +102,11 @@ main {
     width: 100%;
   }
   .font-page section.images {
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+  .font-page section.images img {
+    width: 70%;
   }
 }

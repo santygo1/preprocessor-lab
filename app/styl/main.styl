@@ -34,13 +34,15 @@ body
 	
 main
 	padding 2% 5%
+	overflow hidden
 	
-.main, .font-page
-	p 
+.main
+	p
 		text-align justify
 		word-spacing 1.3em
 		text-indent 1.5em
 		line-height 2
+			
 	&__text
 		overflow hidden
 		img
@@ -53,15 +55,21 @@ main
 .font-page
 	display flex
 	flex-direction column
-	gap 30px
+	p 
+		text-align justify
+		word-spacing 1.3em
+		text-indent 1.5em
+		line-height 2
 	section.images
 		display flex
+		height 100%
 		justify-content: space-between
-		flex-wrap wrap
+		flex-wrap nowrap
 		img
-			width 250px
-	
-@media(max-width 800px)
+			width 30%
+			object-fit cover
+			
+@media(max-width 900px)
 	.wrapper
 		min-width 300px
 		min-height 300px
@@ -79,4 +87,9 @@ main
 				width 100%
 	.font-page
 		section.images
-			justify-content center	
+			flex-direction column
+			justify-content center
+			align-items center
+			img 
+				width 70%
+			
