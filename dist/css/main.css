@@ -36,7 +36,7 @@ main {
   padding: 2% 5%;
   overflow: hidden;
 }
-.main p {
+p {
   text-align: justify;
   word-spacing: 1.3em;
   text-indent: 1.5em;
@@ -63,31 +63,46 @@ main {
   text-indent: 1.5em;
   line-height: 2;
 }
-.font-page section.images {
+section.images {
   display: flex;
   height: 100%;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-.font-page section.images img {
+section.images img {
   width: 30%;
   -o-object-fit: cover;
   object-fit: cover;
 }
-@media (max-width: 900px) {
+.syntax-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.syntax-page section.images img {
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+section.double-text {
+  display: flex;
+  gap: 10vw;
+}
+section.double-text p {
+  flex: 1;
+}
+@media (max-width: 800px) {
   .wrapper {
     min-width: 300px;
     min-height: 300px;
     margin: 10px;
   }
+  p {
+    font-size: 1.8vw;
+    word-spacing: 1.8vw;
+  }
   .main,
   .font-page {
     margin-top: 30px;
-  }
-  .main p,
-  .font-page p {
-    font-size: 1.8vw;
-    word-spacing: 1.8vw;
   }
   .main__text,
   .font-page__text {
@@ -101,12 +116,13 @@ main {
   .font-page__video iframe {
     width: 100%;
   }
-  .font-page section.images {
+  section.images {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
   }
-  .font-page section.images img {
+  section.images img {
     width: 70%;
   }
 }

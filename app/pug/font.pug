@@ -5,17 +5,13 @@ append page-config
 	-var title = 'CSS'
 	-var selected_item_id = 'font-menu-item'
 
-//- add png image
-mixin image(filename)
-	img(src= IMAGE_DIR + filename + ".png")
-
 //- add Font content 
 block content
 	main.font-page
 		section.images
-			+image("css-text-decoration")
-			+image("css-probely")
-			+image("css-text")
+			+image("css-probely", PNG)
+			+image("css-text-decoration", PNG)
+			+image("css-text", PNG)
 		p.
 			#[tt font] - универсальное свойство, которое позволяет одновременно задать несколько характеристик шрифта и текста.#[br]
 			Синтаксис#[br]

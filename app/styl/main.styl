@@ -36,12 +36,13 @@ main
 	padding 2% 5%
 	overflow hidden
 	
+p
+	text-align justify
+	word-spacing 1.3em
+	text-indent 1.5em
+	line-height 2
+	
 .main
-	p
-		text-align justify
-		word-spacing 1.3em
-		text-indent 1.5em
-		line-height 2
 			
 	&__text
 		overflow hidden
@@ -60,7 +61,9 @@ main
 		word-spacing 1.3em
 		text-indent 1.5em
 		line-height 2
-	section.images
+
+//- images line styling
+section.images
 		display flex
 		height 100%
 		justify-content: space-between
@@ -69,15 +72,30 @@ main
 			width 30%
 			object-fit cover
 			
-@media(max-width 900px)
+.syntax-page
+	display flex
+	flex-direction column
+	gap 10px
+	section.images
+		img
+			object-fit fill
+
+section.double-text
+	display flex
+	gap 10vw
+	p
+		flex 1
+
+@media(max-width 800px)
 	.wrapper
 		min-width 300px
 		min-height 300px
 		margin 10px 
+	p 
+		correctText(1.8)
+		
 	.main, .font-page
 		margin-top 30px
-		p 
-			correctText(1.8)
 		&__text
 			text-align center
 			img
@@ -85,11 +103,11 @@ main
 		&__video
 			iframe
 				width 100%
-	.font-page
-		section.images
+	section.images
 			flex-direction column
 			justify-content center
 			align-items center
+			gap 10px
 			img 
 				width 70%
 			
