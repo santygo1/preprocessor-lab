@@ -1,0 +1,11 @@
+//- import menu_items map
+include menu_items 
+
+//- creating simple navigation menu with current selected item
+mixin nav_menu(selected_item_id)
+	header.header
+		nav.header__nav
+			ul
+				each item in menu_items
+					- var isSelected = (item.id == selected_item_id)
+					li(class = isSelected 	? 'selected' : '' ): a(href = item.link + ".html")=item.title

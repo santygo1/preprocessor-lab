@@ -1,0 +1,24 @@
+extends includes/basis
+
+//- ovveride css page config for basis
+append page-config
+	-var title = 'CSS'
+	-var selected_item_id = 'css-menu-item'
+
+block content
+	main.main
+		section.main__text
+			p CSS (англ. Cascading Style Sheets — каскадные таблицы стилей) — формальный язык описания внешнего вида документа, написанного с использованием языка разметки.
+			div 	
+				img(src="img/css1.jpg")
+				p Основным понятием CSS является стиль – т. е. набор правил оформления и форматирования, который может быть  применен к различным элементам страницы. Для присвоения какому-либо элементу определенных характеристик необходимо  один раз описать этот элемент и определить это описание как стиль, а в дальнейшем просто указывать, что элемент получить свойства выбранного стиля.
+		section.main__video
+			iframe(
+					width="560" 
+					height="315" 
+					src="https://www.youtube.com/embed/W5LPcpIRLzs" 
+					title="YouTube video player" 
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen
+				)

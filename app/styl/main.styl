@@ -1,0 +1,63 @@
+//- imports
+@import header
+
+//- colors
+$primary-color = #164B69
+$main-block-color = #E3E3E3
+
+//- font-attributes
+$font-default = 14px arial  
+
+//- mixins
+correctText(val)
+	font-size val vw
+	word-spacing val vw
+
+//default prepare
+*
+	padding 0
+	margin 0
+	box-sizing border-box
+	border 0
+	
+body
+	background-color $primary-color
+	font $font-default
+	
+.wrapper
+	background-color $main-block-color
+	min-height 700px
+	min-width 700px
+	margin 30px 60px
+	padding 30px
+	
+.main
+	margin-top 30px
+	p 
+		text-align justify
+		word-spacing 1.3em
+		text-indent 1.5em
+		line-height 2
+	&__text
+		overflow hidden
+		img
+			float right
+			margin-left 10px
+	&__video
+		text-align center
+
+@media(max-width 800px)
+	.wrapper
+		min-width 0
+		min-height 0
+	.main
+		margin-top 30px
+		p 
+			correctText(1.8)
+		&__text
+			text-align center
+			img
+				float none
+		&__video
+			iframe
+				width 100%
